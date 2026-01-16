@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,11 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
     <!--css-->
     <link rel="stylesheet" href="./assets/style/main.css">
 
@@ -19,7 +24,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="area_navbar">
         <div class="navbar">
             <div class="logo_navbar"><a href="#">Bruna Silva</a></div>
             <ul class="links">
@@ -28,6 +33,9 @@
                 <li><a href="project">Projetos</a></li>
                 <li><a href="contact">Contato</a></li>
             </ul>
+            <div class="header_toggle">
+                <i id="toggleTheme" class="bi bi-sun"></i>
+            </div>
             <a href="#" class="action_btn">Menu</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
@@ -43,10 +51,61 @@
     </header>
     <main>
         <section id="intro">
-            <h1>Aqui terá as minahas informações</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A facilis tempore illo ut molestiae laudantium
-                rem ipsa ex accusantium eligendi non, cum, repudiandae fuga id, enim tenetur explicabo voluptatem optio!
+            <h1>Olá, Eu sou a Bruna!</h1>
+            <p>Tenho Formação em Gestão da Tecnologia da Informação, sou apaixonada por tecnologia
+                desde criança, ao longa da minha jornada realizei alguns cursos introdutores como, Python, banco de
+                dados,
+                Power Bi entre outros, meu objetivo é me tornar Fullstack , gosto muito de estudar, e tenho interesse em
+                atuar
+                na area de cibergurança também.
             </p>
+            <button>Linkedin</button>
+            <button>Github</button>
+            <button>Curriculo</button>
+            <a src="#" alt="Foto de perfil"></a>
+        </section>
+        <section id="education">
+            <div id="courses">
+                <h1>Formação</h1>
+                <h3>2021 - 2023</h3>
+                <p>Faculdade Adventista da Bahia</p>
+            </div>
+            <div id="technologies">
+                <h1>Tecnologias</h1>
+            </div>
+        </section>
+        <section id="area_project">
+            <h1>Projetos</h1>
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10 col-md-8 col-lg-7">
+                        <div class="card shadow ">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-12 col-md-4 text-center">
+                                    <img src="./assets/image/web-site-fadba.png" class="img-fluid rounded-start p-3"
+                                        alt="Foto do Web site">
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <div class="card-body text-center text-md-start">
+                                        <h5 class="card-title"><a href="https://pos.gtifadba.com.br/">Web site de
+                                                Pós-Graduação</a></h5>
+                                        <p class="card-text">
+                                            Esse Web site foi desenvolvido no ultimo ano da graduação eu fiquei
+                                            responsavel
+                                            pelo desenvolvimento do web site e minha dupla Roseane ficou com a
+                                            documentação,
+                                            tudo meramente ilustrativo com algumas informações da instituição.
+                                        </p>
+                                        <small class="text-muted">TecnologiaS UtilizadaS <i
+                                                class="fa-brands fa-wordpress"></i></small><i
+                                            class="fa-brands fa-elementor"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
