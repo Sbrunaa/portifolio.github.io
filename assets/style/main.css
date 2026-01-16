@@ -1,8 +1,84 @@
 @import url(./reset.css);
 
+
+/*paleta de cores*/
+:root,
+:root[data-theme='dark'] {
+    --primary-color: #E0B1CB;
+
+    --primary-bg-color: #231942;
+    --secondary-bg-color: #5E548E;
+    --primary-border-color: #9F86C0;
+    --secondary-border-color: #9F86C0;
+
+    --title-color: #E0B1CB;
+    --text-color: #BE95C4;
+    --link-color: #E0B1CB;
+    --icon-color: #BE95C4;
+    --a-hover: #231942;
+}
+
+:root,
+:root[data-theme='light'] {
+    --primary-color: #5E548E;
+
+    --primary-bg-color: #E0B1CB;
+    --secondary-bg-color: #BE95C4;
+    --primary-border-color: #231942;
+    --secondary-border-color: #5E548E;
+
+    --title-color: #231942;
+    --text-color: #5E548E;
+    --link-color: #231942;
+    --icon-color: #231942;
+    --a-hover: #f0e3ea;
+}
+
+html[data-theme='light'] .brand_logo {
+    filter: invert(1);
+}
+
+html[data-theme='light'] .technologies__logo {
+    filter: invert(80%);
+}
+
 body {
     height: 100vh;
-    background: rgb(160, 36, 160);
+    background: var(--primary-bg-color);
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-bg-color);
+    border-radius: 50rem;
+}
+
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+
+
+
+#area_navbar {
+    background: var(--accent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* garante que fique acima do conteúdo */
 }
 
 li {
@@ -11,12 +87,12 @@ li {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--link-color);
     font-size: 1rem;
 }
 
 a:hover {
-    color: rgb(105, 3, 105);
+    color: var(--a-hover);
 }
 
 /*Header*/
@@ -29,11 +105,14 @@ header {
 .navbar {
     width: 100%;
     height: 60px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .navbar .logo_navbar a {
@@ -46,6 +125,7 @@ header {
     gap: 2rem;
 }
 
+
 /*botão*/
 .navbar .toggle_btn {
     color: rgb(245, 245, 245);
@@ -55,8 +135,8 @@ header {
 }
 
 .action_btn {
-    background-color: rgb(128, 9, 128);
-    color: rgb(241, 241, 241);
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 25px;
@@ -91,7 +171,7 @@ header {
 }
 
 .dropdown_menu.open {
-    height: 210px;
+    height: 240px;
 }
 
 .dropdown_menu li {
@@ -110,19 +190,32 @@ header {
 /*intro - minhas informações*/
 section#intro {
     /*faz o calculo com o heigth do navbar*/
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    background: var(--accent);
 }
 
 #intro h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
+
+/*seção eduação*/
+section#education {
+    background: var(--accent);
+}
+
+/*secão projeto*/
+section#area_project {
+    background: var(--accent);
+}
+
+
 
 /*Resposividade header*/
 @media(max-width: 992px) {
