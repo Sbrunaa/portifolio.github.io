@@ -4,7 +4,7 @@
 /*paleta de cores*/
 :root,
 :root[data-theme='dark'] {
-    --primary-color: #E0B1CB;
+    --primary-color: #dcd7f3;
 
     --primary-bg-color: #231942;
     --secondary-bg-color: #5E548E;
@@ -12,9 +12,9 @@
     --secondary-border-color: #9F86C0;
 
     --title-color: #E0B1CB;
-    --text-color: #BE95C4;
-    --link-color: #E0B1CB;
-    --icon-color: #BE95C4;
+    --text-color: #dcd7f3;
+    --link-color: #5E548E;
+    --icon-color: #c3b4c5;
     --a-hover: #231942;
 }
 
@@ -22,7 +22,7 @@
 :root[data-theme='light'] {
     --primary-color: #5E548E;
 
-    --primary-bg-color: #E0B1CB;
+    --primary-bg-color: #f7d7e8;
     --secondary-bg-color: #BE95C4;
     --primary-border-color: #231942;
     --secondary-border-color: #5E548E;
@@ -31,7 +31,7 @@
     --text-color: #5E548E;
     --link-color: #231942;
     --icon-color: #231942;
-    --a-hover: #f0e3ea;
+    --a-hover: #5E548E;
 }
 
 html[data-theme='light'] .brand_logo {
@@ -47,6 +47,7 @@ body {
     background: var(--primary-bg-color);
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
+
 }
 
 ::-webkit-scrollbar {
@@ -72,7 +73,6 @@ body {
 
 
 #area_navbar {
-    background: var(--accent);
     position: fixed;
     top: 0;
     left: 0;
@@ -87,12 +87,8 @@ li {
 
 a {
     text-decoration: none;
-    color: var(--link-color);
+    color: var(--text-color);
     font-size: 1rem;
-}
-
-a:hover {
-    color: var(--a-hover);
 }
 
 /*Header*/
@@ -207,14 +203,19 @@ section#intro {
 
 /*seção eduação*/
 section#education {
-    background: var(--accent);
+    background: var(--text-color-inverso);
+    color: var(--title-color);
 }
 
 /*secão projeto*/
 section#area_project {
     background: var(--accent);
+
 }
 
+.project_hover:hover {
+    color: var(--text-color);
+}
 
 
 /*Resposividade header*/
