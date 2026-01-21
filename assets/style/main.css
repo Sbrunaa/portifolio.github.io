@@ -211,7 +211,6 @@ header {
 section#intro {
     /*faz o calculo com o heigth do navbar*/
     min-height: calc(100vh - 60px);
-    display: flex;
     flex-direction: column;
     justify-content: center;
     display: grid;
@@ -415,13 +414,207 @@ section#intro {
 
 
 /*seção eduação*/
-section#education {
+section#education {}
 
-    background: var(--primary-color);
-    color: var(--title-color);
+/*formação*/
+#training {}
+
+/* From Uiverse.io by Yaya12085 */
+.code-editor {
+    max-width: 300px;
+    background-color: #1d1e22;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.title {
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 1.57px;
+    color: rgb(212 212 212);
+}
+
+.icon {
+    width: 20px;
+    transition: .2s ease;
+}
+
+.icon:hover {
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #6e7281;
+}
+
+.editor-content {
+    margin: 0 10px 10px;
+    color: white;
+}
+
+.property {
+    margin-left: 30px;
+}
+
+.property:hover {
+    cursor: text;
+}
+
+.editor-content .color-0 {
+    color: rgb(86 156 214);
+}
+
+.editor-content .color-1 {
+    color: rgb(182 206 168);
+}
+
+.editor-content .color-2 {
+    color: rgb(156 220 254);
+}
+
+.editor-content .color-3 {
+    color: rgb(239, 254, 156);
 }
 
 
+
+.color-preview-1,
+.color-preview-2 {
+    height: 8px;
+    width: 8px;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.color-preview-1 {
+    background-color: #1d1e22;
+}
+
+.color-preview-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*cursos*/
+#courses {}
+
+/* From Uiverse.io by bociKond */
+.wrapper {
+    position: relative;
+    --white: #e3e3e3;
+    --bc: rgb(203, 46, 79);
+    --bc-al: rgba(203, 46, 79, 0.6);
+}
+
+.card {
+    max-width: 340px;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-areas: "top" "bottom";
+    grid-template-rows: 20% 1fr;
+    border: 1px solid var(--bc-al);
+    border-radius: .75rem;
+    background: var(--bc-al);
+    color: var(--white);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 15px 30px -15px var(--bc-al);
+    isolation: isolate;
+}
+
+.circle-1 {
+    position: absolute;
+    content: '';
+    width: 5rem;
+    height: 5rem;
+    left: 1rem;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: var(--bc-al);
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.circle-2 {
+    position: absolute;
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    right: -1rem;
+    top: 3rem;
+    background-color: var(--bc-al);
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.top {
+    padding: .5rem 4rem;
+    z-index: 1;
+}
+
+.bottom {
+    z-index: 2;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0;
+}
+
+.user {
+    width: 100%;
+    padding: .75rem 4rem;
+    display: flex;
+    gap: .1rem;
+    flex-direction: column;
+    align-items: flex;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--bc-al);
+    position: relative;
+}
+
+.user:hover {
+    background-color: var(--bc-al);
+}
+
+.user:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.user::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 1.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.user-occupation {
+    opacity: .8;
+}
+
+.u-l {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-style: italic;
+}
 
 /*secão projeto*/
 section#area_project {
@@ -458,4 +651,3 @@ section#area_project {
         width: unset;
     }
 }
-
