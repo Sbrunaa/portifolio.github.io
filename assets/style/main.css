@@ -21,7 +21,7 @@
     --font-color: #fefefe;
     --font-color-sub: #231942;
     --bg-color: #9F86C0;
-    --main-color: #fefefe;
+    --header-color: #6a6194;
 }
 
 :root,
@@ -43,7 +43,7 @@
     --font-color: #fefefe;
     --font-color-sub: #BE95C4;
     --bg-color: #231942;
-    --main-color: #fefefe;
+    --header-color: #bfbad6;
 
     /*cores de sombra do conteudo sobre mim*/
 
@@ -119,6 +119,7 @@ h1 {
 header {
     position: relative;
     padding: 0 2rem;
+    background: var(--header-color);
 }
 
 .navbar {
@@ -414,10 +415,16 @@ section#intro {
 
 
 /*seção eduação*/
-section#education {}
+section#education {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+
+    background: var(--primary-color);
+}
 
 /*formação*/
-#training {}
+
 
 /* From Uiverse.io by Yaya12085 */
 .code-editor {
@@ -504,7 +511,7 @@ section#education {}
 
 
 /*cursos*/
-#courses {}
+
 
 /* From Uiverse.io by bociKond */
 .wrapper {
@@ -514,7 +521,7 @@ section#education {}
     --bc-al: rgba(203, 46, 79, 0.6);
 }
 
-.card {
+.card_courses {
     max-width: 340px;
     padding: 1rem 0;
     display: grid;
@@ -618,7 +625,6 @@ section#education {}
 
 /*secão projeto*/
 section#area_project {
-
     background: var(--accent);
 
 }
@@ -627,6 +633,12 @@ section#area_project {
     color: var(--link-color);
 }
 
+/*roda pé*/
+footer {
+    background: var(--primary-color);
+    color: var(--font-color);
+    text-align: center;
+}
 
 /*Resposividade header*/
 @media(max-width: 992px) {
@@ -642,6 +654,16 @@ section#area_project {
 
     .dropdown_menu {
         display: block;
+    }
+}
+
+
+@media (max-width: 768px) {
+    section#education {
+        flex-direction: column;
+        /* Força empilhamento vertical em telas pequenas */
+        gap: 10px;
+        /* Reduz o espaçamento */
     }
 }
 
