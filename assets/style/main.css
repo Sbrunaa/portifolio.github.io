@@ -4,7 +4,7 @@
 /*paleta de cores*/
 :root,
 :root[data-theme='dark'] {
-    --primary-color: #dcd7f3;
+    --primary-color: #f7d7e8;
 
     --primary-bg-color: #231942;
     --secondary-bg-color: #5E548E;
@@ -417,16 +417,14 @@ section#intro {
 /*seção eduação*/
 section#education {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 20px;
     background: var(--primary-color);
 }
 
 /*formação*/
-
-
-/* From Uiverse.io by Yaya12085 */
 .code-editor {
     max-width: 300px;
     background-color: #1d1e22;
@@ -490,8 +488,6 @@ section#education {
     color: rgb(239, 254, 156);
 }
 
-
-
 .color-preview-1,
 .color-preview-2 {
     height: 8px;
@@ -511,54 +507,24 @@ section#education {
 
 
 /*cursos*/
-
-
 /* From Uiverse.io by bociKond */
 .wrapper {
     position: relative;
-    --white: #e3e3e3;
-    --bc: rgb(203, 46, 79);
-    --bc-al: rgba(203, 46, 79, 0.6);
 }
 
 .card_courses {
-    max-width: 340px;
+    max-width: 380px;
     padding: 1rem 0;
     display: grid;
     grid-template-areas: "top" "bottom";
     grid-template-rows: 20% 1fr;
-    border: 1px solid var(--bc-al);
+    border: 1px solid var(--primary-border-color);
     border-radius: .75rem;
-    background: var(--bc-al);
-    color: var(--white);
+    background: var(--primary-bg-color);
+    color: var(--text-color);
     backdrop-filter: blur(14px);
-    box-shadow: 0 15px 30px -15px var(--bc-al);
+    box-shadow: 0 15px 30px -15px var(--secondary-border-color);
     isolation: isolate;
-}
-
-.circle-1 {
-    position: absolute;
-    content: '';
-    width: 5rem;
-    height: 5rem;
-    left: 1rem;
-    top: 50%;
-    transform: translate(-50%);
-    background-color: var(--bc-al);
-    border-radius: 50%;
-    z-index: -10;
-}
-
-.circle-2 {
-    position: absolute;
-    content: '';
-    width: 3rem;
-    height: 3rem;
-    right: -1rem;
-    top: 3rem;
-    background-color: var(--bc-al);
-    border-radius: 50%;
-    z-index: -10;
 }
 
 .top {
@@ -584,12 +550,12 @@ section#education {
     flex-direction: column;
     align-items: flex;
     font-size: 1.1rem;
-    border-bottom: 1px solid var(--bc-al);
+    border-bottom: 1px solid var(--secondary-border-color);
     position: relative;
 }
 
 .user:hover {
-    background-color: var(--bc-al);
+    background-color: var(--header-color);
 }
 
 .user:nth-last-child(1) {
@@ -604,7 +570,7 @@ section#education {
     left: 1.75rem;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--white);
+    background-color: var(--bg-color);
     border-radius: 50%;
 }
 
@@ -622,6 +588,65 @@ section#education {
     font-weight: 700;
     font-style: italic;
 }
+
+/*tecnologias*/
+
+/* From Uiverse.io by Shreya-3107 */
+.card_technologies {
+    width: 290px;
+    height: 300px;
+    background: #c0afd5;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    box-shadow: -20px 20px 0px -5px #9c87c0;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 1.7em;
+}
+
+.tag__name {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.1em;
+    background-color: #9c87c0;
+    padding: 6px 23px 9px;
+    border-radius: 70em;
+    margin: 8px 6px 8px 0;
+    margin-left: 0px;
+    position: relative;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.tag__name::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #554860;
+}
+
+.tag__name::before {
+    left: 7px;
+}
+
+.tag__name::after {
+    right: 7px;
+}
+
+.tag__name:hover {
+    transform: scale(1.1);
+    background-color: #9c87c0;
+}
+
 
 /*secão projeto*/
 section#area_project {
