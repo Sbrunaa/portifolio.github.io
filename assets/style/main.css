@@ -14,7 +14,7 @@
     --title-color: #9F86C0;
     --text-color: #dcd7f3;
     --link-color: #5E548E;
-    --icon-color: #c3b4c5;
+    --icon-color: #5E548E;
     --a-hover: #231942;
 
     /*cores card contato e foto*/
@@ -41,7 +41,7 @@
 
     /*cores card contato e foto*/
     --font-color: #fefefe;
-    --font-color-sub: #BE95C4;
+    --font-color-sub: #dcd7f3;
     --bg-color: #231942;
     --header-color: #bfbad6;
 
@@ -191,7 +191,7 @@ header {
 }
 
 .dropdown_menu.open {
-    height: 240px;
+    height: 180px;
 }
 
 .dropdown_menu li {
@@ -205,6 +205,10 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.dropdown_menu li:hover {
+    background: var(--font-color);
 }
 
 
@@ -662,8 +666,96 @@ section#area_project {
 footer {
     background: var(--primary-color);
     color: var(--font-color);
-    text-align: center;
 }
+
+.texto_rodape {
+    color: var(--font-color-sub);
+    align-items: center;
+    padding-top: 15px;
+}
+
+/*redes sociasi*/
+/* From Uiverse.io by david-mohseni */
+.wrapper_rodape {
+    display: inline-flex;
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    padding-top: 15px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.wrapper_rodape .icon {
+    position: relative;
+    background: var(--icon-color);
+    border-radius: 50%;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper_rodape .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper_rodape .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper_rodape .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper_rodape .icon:hover span,
+.wrapper_rodape .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.wrapper_rodape .linkedin:hover,
+.wrapper_rodape .linkedin:hover .tooltip,
+.wrapper_rodape .linkedin:hover .tooltip::before {
+    background: #104464;
+    color: #fff;
+}
+
+.wrapper_rodape .github:hover,
+.wrapper_rodape .github:hover .tooltip,
+.wrapper_rodape.github:hover .tooltip::before {
+    background: #0e0d0d;
+    color: #fff;
+}
+
 
 /*Resposividade header*/
 @media(max-width: 992px) {
